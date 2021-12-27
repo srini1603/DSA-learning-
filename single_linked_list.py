@@ -172,7 +172,7 @@ class LinkedList :
         temp = self.head
         after = temp.next           ##         self.head
         while temp is not None:       #         |
-            after = temp.next       #  none(<-) a     b -> c -> d -> none
+            after = temp.next       #  none(<-) a  -> b -> c -> d -> none
             temp.next = before      #  |        |       |
             before = temp           #  before  temp   after(temp.next)
             temp = after
