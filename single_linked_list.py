@@ -170,7 +170,8 @@ class LinkedList :
         self.tail =self.head
         before = None
         temp = self.head
-        after = temp.next           ##         self.head
+        if self.head is None:
+            return self.head        ##         self.head
         while temp is not None:       #         |
             after = temp.next       #  none(<-) a  -> b -> c -> d -> none
             temp.next = before      #  |        |       |
