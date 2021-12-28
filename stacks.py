@@ -2,7 +2,8 @@ class Node:
     def __init__(self,value):
         self.value = value
         self.next = None
-
+# every operation is done in head because remove and add at head is O(1)
+# where at end need to traver the whole list which cost O(n)
 class Stack:
     def __init__(self,value):
         new_node =Node(value)
