@@ -51,6 +51,20 @@ class BinarySearchTree:
                 return True
         return False
 
+    def BreathFirstSearch(self):
+        curr = self.root
+        queue = []
+        result = []
+        queue.append(curr)
+        while(len(queue) > 0):
+            curr = queue.pop(0)
+            result.append(curr.value)
+            if curr.left is not None:
+                queue.append(curr.left)
+            if curr.right is not None:
+                queue.append(curr.right)
+        return result
+
 my_node = BinarySearchTree()
 
 print(my_node.Contain(7))
@@ -58,12 +72,18 @@ print(my_node.Contain(7))
 my_node.Insert(5)
 my_node.Insert(2)
 my_node.Insert(7)
+my_node.Insert(9)
+my_node.Insert(1)
+my_node.Insert(3)
+my_node.Insert(8)
 
-print(my_node.root.value)
-print(my_node.root.right.value)
-print(my_node.root.left.value)
+print(my_node.BreathFirstSearch)
 
-print(my_node.Contain(7))
-print(my_node.Contain(17))
+# print(my_node.root.value)
+# print(my_node.root.right.value)
+# print(my_node.root.left.value)
+#
+# print(my_node.Contain(7))
+# print(my_node.Contain(17))
 
 
