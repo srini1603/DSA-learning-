@@ -45,5 +45,28 @@ t.unique(0,0,m,n)
 
 print(t.paths)
         
+        
+# for longest non repeating character use hashset
+# append the new char if char(new) is not in set use (j varibale) or else  remove from front 
+# pwwken  
+# 1)p 2)pw 3)(since it w and in substring we'll remove untill we remove w pw->w ->"")  4) w 5) wk 6) wke 7)wken
+
+
+s = "pwwken"
+t = []
+maxs = 0
+i =0
+j =0
+while(i<len(s) and j <len(s)):
+        print(t)
+        if(s[i] in t):
+                t.pop(j)
+        else:
+                t.append(s[i])
+                maxs = max(maxs, len(t))
+                i += 1
+
+print(maxs)
+
                 
         
